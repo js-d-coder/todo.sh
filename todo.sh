@@ -131,18 +131,18 @@ function setPreference {
 
 # setUp function is first command that is run in this script.
 # setUp function is used to check whether this script is being run for the first
-# time by checking whether .todo directory exists or not. .todo directory
+# time by checking whether .todo.sh directory exists or not. .todo.sh directory
 # which is created in user's home directory is used to store files needed by this
 # script to work.
 
-# .todo directory holds files that are named after TASK and sub-directories
+# .todo.sh directory holds files that are named after TASK and sub-directories
 # that are named after the particular date to hold the TASK for that date.
 # Name of those directory are of the form YYMMDD.
-# .todo and sub-directories contain a file named .count, which holds the
+# .todo.sh and sub-directories contain a file named .count, which holds the
 # names of TASK/files in that directory.
 
-# If .todo directory does not exists is created. setUp function checks
-# whether .todo directory exists or every time you run this script.
+# If .todo.sh directory does not exists is created. setUp function checks
+# whether .todo.sh directory exists or every time you run this script.
 
 # record function (see below) is run once every time setUp function is run
 # i.e. every time this script is run. record function is also run after
@@ -157,17 +157,17 @@ then
 	show_error "${HOME} not defined";
 	return 1
 fi
-if [ ! -d ${HOME}/.todo ]
+if [ ! -d ${HOME}/.todo.sh ]
 then
-	if mkdir -p ${HOME}/.todo 2>/dev/null # create .todo if it does not exists
+	if mkdir -p ${HOME}/.todo.sh 2>/dev/null # create .todo.sh if it does not exists
 	then
-		show_info "Creating ${HOME}/.todo directory to store data"
+		show_info "Creating ${HOME}/.todo.sh directory to store data"
 	else
-		show_error "Cannot create directory ${HOME}/.todo"
+		show_error "Cannot create directory ${HOME}/.todo.sh"
 		return 1
 	fi
 fi
-cd ${HOME}/.todo
+cd ${HOME}/.todo.sh
 if [ -r .lock ]
 then
 	if ! zenity --warning --text="Another instance of todo is running" &>/dev/null
@@ -185,8 +185,8 @@ return 0
 
 ####################### make list of files or tasks ############################
 
-# record function creates file named .count in .todo. This is file is used
-# to keep a list of other files in .todo directory. Names of the files
+# record function creates file named .count in .todo.sh. This is file is used
+# to keep a list of other files in .todo.sh directory. Names of the files
 # in .count file represents the names of TASK that repeat everyday
 
 # record function can be passed with an argument of the form YYDDMM, which is
@@ -196,7 +196,7 @@ function record {
 
 # takes a parameter, parameter should be a date of the form YYMMDD
 
-# .count file keeps track of files in .todo directory.
+# .count file keeps track of files in .todo.sh directory.
 # Each of these files keeps details of task/todo/reminder.
 
 # Check to see if .count file already exists, if not create another one
