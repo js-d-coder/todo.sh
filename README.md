@@ -34,6 +34,13 @@ date can be any human readable date form, `man date` for more.
 You need BASH shell installed. That's it! BASH comes pre-installed on all Linux distributions.  
 This programs works well any platform (\*BSD, for example) with BASH shell installed
 
+## Screenshots:
+
+![todo.sh screenshot](screenshots/1.jpeg)
+![todo.sh screenshot](screenshots/2.jpeg)
+![todo.sh screenshot](screenshots/3.jpeg)
+![todo.sh screenshot](screenshots/4.jpeg)
+
 ## Troubleshooting:
 
 To prevent users from running multiple instance of todo.sh, it creates `.lock` file in `~/.todo.sh` directory.  
