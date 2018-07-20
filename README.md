@@ -34,4 +34,9 @@ date can be any human readable date form, `man date` for more.
 You need BASH shell installed. That's it! BASH comes pre-installed on all Linux distributions.  
 This programs works well any platform (\*BSD, for example) with BASH shell installed
 
+## Troubleshooting:
+
+To prevent users from running multiple instance of todo.sh, it creates `.lock` file in `~/.todo.sh` directory.  
+If you are unable to start the application and see this error `Another instance of todo is running` make sure you are not already running it. If that is not the case you should delete `.lock` file and start the application again.
+
 © 2018, Jibran Shaikh (https://github.com/js-d-coder/todo.sh) under MIT License
