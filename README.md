@@ -46,4 +46,8 @@ This programs works well any platform (\*BSD, for example) with BASH shell insta
 To prevent users from running multiple instance of todo.sh, it creates `.lock` file in `~/.todo.sh` directory.  
 If you are unable to start the application and see this error `Another instance of todo is running` make sure you are not already running it. If that is not the case you should delete `.lock` file and start the application again.
 
+## Future improvements:
+
+[Please refer to TODO.md](TODO.md)
+
 © 2018, Jibran Shaikh (https://github.com/js-d-coder/todo.sh) under MIT License
