@@ -1,3 +1,5 @@
+**NOTE**: this project has moved to https://gitlab.com/js-d-coder/todo-sh
+
 # todo.sh
 
 A command-line application written in bash to help you keep track of your daily tasks, to-do, reminders.
